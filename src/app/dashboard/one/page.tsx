@@ -6,6 +6,6 @@ export const metadata = {
   title: 'Dashboard: One',
 };
 
-export default function Page() {
+export default async function Page() {
   return <OneView />;
 }

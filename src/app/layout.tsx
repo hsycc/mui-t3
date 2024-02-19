@@ -11,6 +11,7 @@ import { MotionLazy } from 'src/components/animate/motion-lazy';
 import { SettingsDrawer, SettingsProvider } from 'src/components/settings';
 
 import { AuthProvider } from 'src/auth/context/jwt';
+import { TRPCReactProvider } from '~/trpc/react';
 
 // ----------------------------------------------------------------------
 
@@ -55,11 +56,14 @@ export default function RootLayout({ children }: Props) {
             }}
           >
             <ThemeProvider>
-              <MotionLazy>
-                <SettingsDrawer />
-                <ProgressBar />
-                {children}
-              </MotionLazy>
+              {/* add trpc provider */}
+              <TRPCReactProvider>
+                <MotionLazy>
+                  <SettingsDrawer />
+                  <ProgressBar />
+                  {children}
+                </MotionLazy>
+              </TRPCReactProvider>
             </ThemeProvider>
           </SettingsProvider>
         </AuthProvider>

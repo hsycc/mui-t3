@@ -9,8 +9,10 @@ import { useSettingsContext } from 'src/components/settings';
 
 // ----------------------------------------------------------------------
 
-export default function TwoView() {
+export default function TwoView({ info }: any) {
   const settings = useSettingsContext();
+
+  console.log(info, 333);
 
   return (
     <Container maxWidth={settings.themeStretch ? false : 'xl'}>
