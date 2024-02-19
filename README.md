@@ -44,3 +44,5 @@ You can find more details about the license at:
 ## 追加更新修改
 
 #### Add [Tailwind CSS](https://docs.minimals.cc/tailwind/)
+
+#### Add [Create T3 Base](https://create.t3.gg)
